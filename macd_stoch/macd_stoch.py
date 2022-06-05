@@ -210,12 +210,12 @@ class Macd_stoch:
                     except Exception as e:
                         print(ticker,e)
         
-    def run(self,duration = 60*60*6,candle_interval = 15): #duration: how long do we want to run the programme
+    def run(self,duration = 60*60*6): #duration: how long do we want to run the programme
         starttime = time.time()
         endtime = time.time() + duration
         while time.time() <= endtime:
             self.strategyLogic()
-            time.sleep(60*candle_interval - ((time.time() - starttime) % 60*candle_interval))
+            time.sleep(60*self.candle_interval - ((time.time() - starttime) % 60*self.candle_interval))
             
 if __name__ == '__main__':
     myTradingApp = Macd_stoch()
