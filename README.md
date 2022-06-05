@@ -1,3 +1,3 @@
 # TradingBot
 
-Simple demo for a trading bot
+Simple demo for trading bot
